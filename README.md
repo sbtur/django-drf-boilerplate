@@ -1,4 +1,4 @@
-# django-boilerplate
+# django-drf-boilerplate
 Boilerplate project using Django and Django REST Framework.
 Currently supporting only Python 3.x.
 
@@ -10,7 +10,7 @@ Docker Compose is used *just* for development environment. The Dockerfile works 
 
 ```bash
 $ django-admin.py startproject \
-  --template=https://github.com/sbtur/django-boilerplate/archive/master.zip \
+  --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip \
   <project_name> .
 $ pip install -r requirements.txt
 $ python src/manage.py runserver
@@ -20,7 +20,7 @@ $ python src/manage.py runserver
 
 ```bash
 $ django-admin.py startproject \
-  --template=https://github.com/sbtur/django-boilerplate/archive/master.zip \
+  --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip \
   <project_name> .
 $ docker-compose up
 ```
@@ -44,4 +44,4 @@ $ git config --bool flake8.strict true
 Running database on latest PostgreSQL Docker container running in the port `5432`. The connection is defined by the `dj-database-url` package. There's a race condition script to avoid running Django before the database goes up.
 
 ## Docs
-Let's face it, human memory sucks. Will you remember every detail that involves your project 6 months from now? How about when the pressure is on? A project with good documentation that explains all the facets, interactions and architectural choices means you and your teammates won't have to spend hours trying to figure it out later. You can find a template to get started [here](https://github.com/sbtur/django-boilerplate/wiki/Docs-Template).
+Let's face it, human memory sucks. Will you remember every detail that involves your project 6 months from now? How about when the pressure is on? A project with good documentation that explains all the facets, interactions and architectural choices means you and your teammates won't have to spend hours trying to figure it out later. You can find a template to get started [here](https://github.com/sbtur/django-drf-boilerplate/wiki/Docs-Template).

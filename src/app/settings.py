@@ -82,16 +82,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "NAME": env("DB_NAME", default="django-drf-boilerplate"),
-        "HOST": env("DB_HOST", default="127.0.0.1"),
-        "PORT": env("DB_PORT", default=5432),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "ENGINE": "django.db.backends.postgresql",
-    }
-}
+#DATABASES = {"default": env.db()}
 
 
 # Password validation

@@ -14,7 +14,7 @@ $ django-admin.py startproject \
 
  ```
 
- ## How to configure database URL]
+ ## How to configure database URL
 Copy file src/app/local.example.env to src/app/local.env
 Set URL data base in the file src/app/local.env
 

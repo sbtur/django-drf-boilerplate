@@ -6,22 +6,31 @@ Currently supporting only Python 3.x.
 Make sure you have Django 2.0 installed on your environment.
 Docker Compose is used *just* for development environment. The Dockerfile works without it.
 
-## How to install
-
+## Download Project Template
 ```bash
 $ django-admin.py startproject \
   --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip \
   <project_name> .
+
+ ```
+
+ ## How to configure database URL]
+Copy file src/app/local.example.env to src/app/local.env
+Set URL data base in the file src/app/local.env
+
+## How to install without Docker
+
+```bash
 $ pip install -r requirements.txt
+$ python src/manage.py migrate
+$ python src/manage.py createsuperuser
 $ python src/manage.py runserver
+
 ```
 
 ## How to install with Docker Compose
 
 ```bash
-$ django-admin.py startproject \
-  --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip \
-  <project_name> .
 $ docker-compose up
 ```
 

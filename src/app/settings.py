@@ -7,7 +7,7 @@ import environ
 env = environ.Env()
 
 # .env file, should load only in development environment
-env_file = join(dirname(__file__), "local.env")
+env_file = join(dirname(__file__), ".env")
 if exists(env_file):
     environ.Env.read_env(str(env_file))
 
@@ -124,8 +124,6 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-
-SITE_ID = 1
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 

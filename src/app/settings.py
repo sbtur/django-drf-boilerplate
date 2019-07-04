@@ -126,8 +126,6 @@ STATICFILES_FINDERS = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-
-
 if DEBUG:
     # Media files (uploads)
     DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"

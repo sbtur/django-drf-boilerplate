@@ -14,9 +14,10 @@ $ django-admin.py startproject \
 
  ```
 
- ## How to configure database URL
+## How to configure database URL
 Copy file src/app/ex.env to src/app/.env
 Set URL data base in the file src/app/.env
+Set new database name in the file docker-compose.yml [POSTGRES_DB: django-drf-bloilerplate]
 
 ## How to install without Docker
 

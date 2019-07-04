@@ -31,6 +31,7 @@ $ python src/manage.py runserver
 ## How to install with Docker Compose
 
 ```bash
+$ docker volume create --name=pgdata
 $ docker-compose up
 ```
 

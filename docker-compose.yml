@@ -1,0 +1,37 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: sbtur/django
+    command: python3 src/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
+    environment:
+      ENV: development
+    depends_on:
+      - migration
+      - db
+
+
+  migration:
+    image: sbtur/django
+    command: python3 src/manage.py migrate --noinput
+    volumes:
+       - .:/usr/src/app
+    depends_on:
+      - db
+
+  db:
+    image: mdillon/postgis
+    restart: always
+    ports:
+      - 5434:5432
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: django-drf-bloilerplate
+      #PGDATA: /tmp

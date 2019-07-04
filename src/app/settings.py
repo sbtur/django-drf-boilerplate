@@ -25,7 +25,6 @@ DEBUG = env.bool("DJANGO_DEBUG", False)
 
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", [])
 
-
 # Application definition
 
 DJANGO_APPS = [
@@ -127,15 +126,14 @@ STATICFILES_FINDERS = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# Media files (uploads)
+
 
 if DEBUG:
+    # Media files (uploads)
     DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
     MEDIA_ROOT = "uploads/"
     MEDIA_URL = "/uploads/"
 
-# Email settings
-
-if DEBUG:
+    # Email settings
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
     DEFAULT_FROM_EMAIL = "no-reply@localhost"

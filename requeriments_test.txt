@@ -1,0 +1,7 @@
+# Testing
+pytest==3.8.0
+pytest-django==3.4.2
+pytest-mock==1.10.0
+pytest-xdist==1.23.0
+freezegun==0.3.10
+

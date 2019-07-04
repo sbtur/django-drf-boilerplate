@@ -32,8 +32,8 @@ $ python src/manage.py runserver
 ## How to install with Docker Compose
 
 ```bash
-$ docker volume create --name=pgdata
 $ docker-compose up
+$ docker run sbtur/django python src/manage.py createsuperuser
 ```
 
 ## Install git pre-commit hook

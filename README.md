@@ -33,7 +33,10 @@ $ python src/manage.py runserver
 
 ```bash
 $ docker-compose up
-$ docker run sbtur/django python src/manage.py createsuperuser
+$ docker ps [get name container not image]
+$ docker exec -i -t django-drf-boilerplate_web_1 /bin/bash
+$ python src/manage.py createsuperuser
+$ exit
 ```
 
 ## Django Admin

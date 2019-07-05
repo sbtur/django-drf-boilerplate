@@ -14,9 +14,10 @@ $ django-admin.py startproject \
 
  ```
 
- ## How to configure database URL
+## How to configure database URL
 Copy file src/app/ex.env to src/app/.env
-Set URL data base in the file src/app/.env
+Set URL database in the file src/app/.env
+Set new database name in the file docker-compose.yml [POSTGRES_DB: django-drf-bloilerplate]
 
 ## How to install without Docker
 
@@ -32,7 +33,16 @@ $ python src/manage.py runserver
 
 ```bash
 $ docker-compose up
+$ docker ps [get name container not image]
+$ docker exec -i -t django-drf-boilerplate_web_1 /bin/bash
+$ python src/manage.py migrate
+$ python src/manage.py createsuperuser
+$ exit
 ```
+
+## Django Admin
+http://localhost:8000/admin/
+
 
 ## Install git pre-commit hook
 Check code syntax and style before commit changes.

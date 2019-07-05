@@ -35,6 +35,7 @@ $ python src/manage.py runserver
 $ docker-compose up
 $ docker ps [get name container not image]
 $ docker exec -i -t django-drf-boilerplate_web_1 /bin/bash
+$ python src/manage.py migrate
 $ python src/manage.py createsuperuser
 $ exit
 ```

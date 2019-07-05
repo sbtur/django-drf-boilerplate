@@ -36,6 +36,10 @@ $ docker-compose up
 $ docker run sbtur/django python src/manage.py createsuperuser
 ```
 
+## Django Admin
+http://localhost:8000/admin/
+
+
 ## Install git pre-commit hook
 Check code syntax and style before commit changes.
 

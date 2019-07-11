@@ -37,10 +37,16 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    # "rest_framework",
+    "django_extensions",
+    "rest_framework",
+    "rest_framework.authtoken",
+    "drf_yasg",
+    "django_filters",
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    "core"
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 

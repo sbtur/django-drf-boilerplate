@@ -1,6 +1,7 @@
 import pytest
 from rest_framework.authtoken.models import Token
 
+
 @pytest.fixture
 def token(client, django_user_model):
     username = "user1"

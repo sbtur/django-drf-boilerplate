@@ -44,9 +44,7 @@ THIRD_PARTY_APPS = [
     "django_filters",
 ]
 
-PROJECT_APPS = [
-    "core"
-]
+PROJECT_APPS = ["core"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 

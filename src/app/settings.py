@@ -39,7 +39,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "django_extensions",
     "rest_framework",
-    "rest_framework.authtoken",
+    #"rest_framework.authtoken",
     "drf_yasg",
     "django_filters",
 ]

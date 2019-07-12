@@ -3,8 +3,6 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from core.models import Example
 from . import serializers
-import os
-
 
 class ExampleView(viewsets.ViewSet):
     @swagger_auto_schema(

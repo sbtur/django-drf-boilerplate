@@ -37,10 +37,14 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    # "rest_framework",
+    "django_extensions",
+    "rest_framework",
+    #"rest_framework.authtoken",
+    "drf_yasg",
+    "django_filters",
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = ["core"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
@@ -57,7 +61,9 @@ MIDDLEWARE = [
 if DEBUG:
     INSTALLED_APPS += ["debug_toolbar"]
     MIDDLEWARE += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
-    INTERNAL_IPS = "127.0.0.1"
+    DEBUG_TOOLBAR_CONFIG = {
+        "SHOW_TOOLBAR_CALLBACK" : lambda request: True,
+    }
 
 ROOT_URLCONF = "app.urls"
 

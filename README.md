@@ -40,8 +40,9 @@ $ python src/manage.py createsuperuser
 $ exit
 ```
 
-## Django Admin
+## Generate token validate API - Django Admin
 http://localhost:8000/admin/
+AUTH TOKEN -> Add Token
 
 
 ## Install git pre-commit hook

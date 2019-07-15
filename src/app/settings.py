@@ -39,7 +39,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "django_extensions",
     "rest_framework",
-    #"rest_framework.authtoken",
+    "rest_framework.authtoken",
     "drf_yasg",
     "django_filters",
 ]
@@ -57,6 +57,15 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "core.auth.TokenAuthSupportQueryString",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
 
 if DEBUG:
     INSTALLED_APPS += ["debug_toolbar"]

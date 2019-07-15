@@ -1,6 +1,5 @@
 from rest_framework.authentication import TokenAuthentication
 
-
 class TokenAuthSupportQueryString(TokenAuthentication):
     def authenticate(self, request):
         if (

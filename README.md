@@ -26,6 +26,7 @@ $ pip install -r requirements.txt
 $ python src/manage.py migrate
 $ python src/manage.py createsuperuser
 $ python src/manage.py runserver
+$ pytest -s
 
 ```
 
@@ -37,6 +38,7 @@ $ docker ps [get name container not image]
 $ docker exec -i -t django-drf-boilerplate_web_1 /bin/bash
 $ python src/manage.py migrate
 $ python src/manage.py createsuperuser
+$ pytest -s
 $ exit
 ```
 

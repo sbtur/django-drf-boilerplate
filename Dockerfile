@@ -11,4 +11,5 @@ RUN apt-get update
 RUN apt-get -y install python3-dev
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+RUN pip install -r requeriments_test.txt
 RUN pip install psycopg2-binary

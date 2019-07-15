@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from core.models import Example
 from . import serializers
 
+
 class ExampleView(viewsets.ViewSet):
     @swagger_auto_schema(
         operation_id="example",

@@ -23,6 +23,7 @@ Set new database name in the file docker-compose.yml [POSTGRES_DB: django-drf-bl
 
 ```bash
 $ pip install -r requirements.txt
+$ pip install -r requeriments_test.txt
 $ python src/manage.py migrate
 $ python src/manage.py createsuperuser
 $ python src/manage.py runserver

@@ -8,9 +8,7 @@ Docker Compose is used *just* for development environment. The Dockerfile works 
 
 ## Download Project Template
 ```bash
-$ django-admin.py startproject \
-  --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip \
-  <project_name> .
+$ django-admin.py startproject --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip <project_name> .
 
  ```
 
@@ -23,6 +21,7 @@ Set new database name in the file docker-compose.yml [POSTGRES_DB: django-drf-bl
 
 ```bash
 $ pip install -r requirements.txt
+$ pip install -r requeriments_test.txt
 $ python src/manage.py migrate
 $ python src/manage.py createsuperuser
 $ python src/manage.py runserver

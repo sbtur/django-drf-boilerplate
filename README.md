@@ -8,9 +8,7 @@ Docker Compose is used *just* for development environment. The Dockerfile works 
 
 ## Download Project Template
 ```bash
-$ django-admin.py startproject \
-  --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip \
-  <project_name> .
+$ django-admin.py startproject --template=https://github.com/sbtur/django-drf-boilerplate/archive/master.zip <project_name> .
 
  ```
 

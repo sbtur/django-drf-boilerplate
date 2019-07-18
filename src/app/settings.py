@@ -98,6 +98,8 @@ WSGI_APPLICATION = "app.wsgi.application"
 
 DATABASES = {"default": env.db()}
 
+ROOT_DIR = environ.Path(__file__) - 3  # (src/settings.py - 3 = src/)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -127,17 +129,14 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+# ------------------------------------------------------------------------------
+STATIC_ROOT = str(ROOT_DIR("staticfiles"))
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-STATICFILES_DIRS = []
-
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 if DEBUG:
     # Media files (uploads)

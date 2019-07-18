@@ -20,6 +20,9 @@ Set new database name in the file docker-compose.yml [POSTGRES_DB: django-drf-bl
 ## How to install without Docker
 
 ```bash
+$ cd [project_name]
+$ virtualenv -p python3 venv
+$ source venv/bin/activate
 $ pip install -r requirements.txt
 $ pip install -r requeriments_test.txt
 $ python src/manage.py migrate
@@ -32,6 +35,7 @@ $ pytest -s
 ## How to install with Docker Compose
 
 ```bash
+$ cd [project_name]
 $ docker-compose up
 $ docker ps [get name container not image]
 $ docker exec -i -t django-drf-boilerplate_web_1 /bin/bash

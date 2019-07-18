@@ -27,3 +27,7 @@ drf-yasg==1.10.2
 #Code Style
 pre-commit==1.11.0
 black==18.6b4
+
+# WSGI Handler
+gevent==1.2.1
+gunicorn==19.7.1

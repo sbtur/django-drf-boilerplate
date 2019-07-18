@@ -3,6 +3,8 @@ from django.urls import path, include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.conf import settings
+from django.contrib.staticfiles import views
+from django.urls import re_path
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -30,3 +32,5 @@ if settings.DEBUG:
     import debug_toolbar
 
     urlpatterns += [path("__debug__/", include(debug_toolbar.urls))]
+
+    urlpatterns += [re_path(r"^static/(?P<path>.*)$", views.serve)]

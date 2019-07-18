@@ -49,22 +49,6 @@ $ exit
 http://localhost:8000/admin/
 AUTH TOKEN -> Add Token
 
-
-## Install git pre-commit hook
-Check code syntax and style before commit changes.
-
-After initializing git, add flake8 hook.
-```bash
-$ git init
-$ python -m flake8 --install-hook git
-```
-
-Set flake8 strict parameter to true, this forces all violations to be fixed
-before the commit.
-```bash
-$ git config --bool flake8.strict true
-```
-
 ## Database with Docker
 Running database on latest PostgreSQL Docker container running in the port `5432`. The connection is defined by the `dj-database-url` package. There's a race condition script to avoid running Django before the database goes up.
 

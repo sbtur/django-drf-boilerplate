@@ -24,7 +24,7 @@ $ cd [project_name]
 $ virtualenv -p python3 venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
-$ pip install -r requeriments_test.txt
+$ pip install -r requirements_test.txt
 $ python src/manage.py migrate
 $ python src/manage.py createsuperuser
 $ python src/manage.py runserver

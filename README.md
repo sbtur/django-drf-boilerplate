@@ -4,7 +4,6 @@ Currently supporting only Python 3.x.
 
 **IMPORTANT**:
 Make sure you have Django 2.0 installed on your environment.
-Docker Compose is used *just* for development environment. The Dockerfile works without it.
 
 ## Download Project Template
 ```bash

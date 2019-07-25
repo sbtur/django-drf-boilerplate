@@ -15,7 +15,16 @@ $ django-admin.py startproject --template=https://github.com/sbtur/django-drf-bo
 Install Postgres and Start service on your Operating System;
 Login Postgres psql -U postgres;
 
-Create the DB CREATE DATABASE django-drf-bloilerplate;
+Create the DB CREATE DATABASE db_name;
+
+## Postgre SQL with Docker
+Creating local DB:
+Initialize docker docker-compose up;
+	- Run docker ps;
+	- Access DB docker instance docker exec -it docker-hash bash;
+	- Access Postgres psql -U postgres;
+	- Create the DB CREATE DATABASE db_name;
+
 
 ## How to configure database URL
 Copy file src/app/ex.env to src/app/.env

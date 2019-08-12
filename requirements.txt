@@ -13,6 +13,7 @@ django-picklefield==2.0
 whitenoise==3.3.1
 django-debug-toolbar==1.7
 
+
 #DB
 psycopg2==2.7.5
 psycopg2-binary==2.7.5
@@ -20,6 +21,7 @@ psycopg2-binary==2.7.5
 #Code Style
 pre-commit==1.11.0
 black==18.6b4
+flake8==3.7.7
 
 #Docs
 drf-yasg==1.10.2

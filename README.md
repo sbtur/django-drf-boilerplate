@@ -42,6 +42,20 @@ $ python src/manage.py createsuperuser
 $ python src/manage.py runserver
 ```
 
+## Install git pre-commit hook
+Check code syntax and style before commit changes.
+
+After initializing git, add flake8 hook.
+```bash
+$ python -m flake8 --install-hook git
+$ pre-commit install
+```
+
+Set flake8 strict parameter to true, this forces all violations to be fixed
+before the commit.
+```bash
+$ git config --bool flake8.strict true
+
 ## How to test app
 ```bash
 $ cd [project_name]
@@ -51,4 +65,3 @@ $ pytest -s
 ## Generate token validate API - Django Admin
 http://localhost:8000/admin/
 AUTH TOKEN -> Add Token
-

@@ -42,15 +42,15 @@ $ python src/manage.py createsuperuser
 $ python src/manage.py runserver
 ```
 
+## Generate token validate API - Django Admin
+http://localhost:8000/admin/
+AUTH TOKEN -> Add Token
+
 ## How to test app
 ```bash
 $ cd [project_name]
 $ pytest -s
 ```
-
-## Generate token validate API - Django Admin
-http://localhost:8000/admin/
-AUTH TOKEN -> Add Token
 
 ## Install git pre-commit hook
 Check code syntax and style before commit changes.

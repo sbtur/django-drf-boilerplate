@@ -42,6 +42,16 @@ $ python src/manage.py createsuperuser
 $ python src/manage.py runserver
 ```
 
+## How to test app
+```bash
+$ cd [project_name]
+$ pytest -s
+```
+
+## Generate token validate API - Django Admin
+http://localhost:8000/admin/
+AUTH TOKEN -> Add Token
+
 ## Install git pre-commit hook
 Check code syntax and style before commit changes.
 
@@ -56,12 +66,4 @@ before the commit.
 ```bash
 $ git config --bool flake8.strict true
 
-## How to test app
-```bash
-$ cd [project_name]
-$ pytest -s
-```
 
-## Generate token validate API - Django Admin
-http://localhost:8000/admin/
-AUTH TOKEN -> Add Token
